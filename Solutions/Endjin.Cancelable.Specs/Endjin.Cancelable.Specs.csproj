@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DD077419-4B15-488F-B88A-E054E8E7A318}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Endjin.Cancelable.Specs</RootNamespace>
+    <AssemblyName>Endjin.Cancelable.Specs</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Endjin.SpecFlow.Composition, Version=1.0.0.32, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\Endjin.SpecFlow.Composition.1.0.0.32\lib\net45\Endjin.SpecFlow.Composition.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EndjinCoreComposition, Version=2.2.0.44, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.44\lib\Net45\EndjinCoreComposition.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EndjinCoreCompositionNet45, Version=2.2.0.44, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.44\lib\Net45\EndjinCoreCompositionNet45.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EndjinCoreContainer, Version=2.2.0.44, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.44\lib\Net45\EndjinCoreContainer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EndjinCoreContainerNet45, Version=2.2.0.44, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.44\lib\Net45\EndjinCoreContainerNet45.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Should, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\Should.1.1.20\lib\Should.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow, Version=1.9.0.77, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Endjin.Cancelable.Azure.Storage\Endjin.Cancelable.Azure.Storage.csproj">
+      <Project>{2ff5b158-54bb-4a62-b8a4-27e83fd67952}</Project>
+      <Name>Endjin.Cancelable.Azure.Storage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Endjin.Cancelable\Endjin.Cancelable.csproj">
+      <Project>{0ffa2e1c-c0cb-4079-a820-709fa59745ea}</Project>
+      <Name>Endjin.Cancelable</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
