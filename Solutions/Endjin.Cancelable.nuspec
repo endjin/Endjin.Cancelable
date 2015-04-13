@@ -13,6 +13,10 @@
     <projectUrl>https://github.com/endjin/Endjin.Cancelable</projectUrl>
     <licenseUrl>https://dl.dropboxusercontent.com/u/5892928/Endjin/Software-License/Open-Source-Software-License.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <dependencies>
+      <dependency id="Endjin.Core.Composition" version="2.2.0.0" />
+      <dependency id="Endjin.Retry" version="1.0.0.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="License.txt" target="License.txt" />
