@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Endjin.Cancelable.Demo", "Endjin.Cancelable.Demo\Endjin.Cancelable.Demo.csproj", "{7C699275-B994-4E0C-BFA3-B380BAC7DBB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Endjin.Cancelable.Azure.Storage", "Endjin.Cancelable.Azure.Storage\Endjin.Cancelable.Azure.Storage.csproj", "{2FF5B158-54BB-4A62-B8A4-27E83FD67952}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Endjin.Cancelable", "Endjin.Cancelable\Endjin.Cancelable.csproj", "{0FFA2E1C-C0CB-4079-A820-709FA59745EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "@Demo", "@Demo", "{5B1C1263-FBC4-4B5E-8656-7DD057069D45}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C699275-B994-4E0C-BFA3-B380BAC7DBB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C699275-B994-4E0C-BFA3-B380BAC7DBB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C699275-B994-4E0C-BFA3-B380BAC7DBB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C699275-B994-4E0C-BFA3-B380BAC7DBB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FF5B158-54BB-4A62-B8A4-27E83FD67952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FF5B158-54BB-4A62-B8A4-27E83FD67952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FF5B158-54BB-4A62-B8A4-27E83FD67952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FF5B158-54BB-4A62-B8A4-27E83FD67952}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FFA2E1C-C0CB-4079-A820-709FA59745EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FFA2E1C-C0CB-4079-A820-709FA59745EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FFA2E1C-C0CB-4079-A820-709FA59745EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FFA2E1C-C0CB-4079-A820-709FA59745EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7C699275-B994-4E0C-BFA3-B380BAC7DBB8} = {5B1C1263-FBC4-4B5E-8656-7DD057069D45}
+	EndGlobalSection
+EndGlobal
