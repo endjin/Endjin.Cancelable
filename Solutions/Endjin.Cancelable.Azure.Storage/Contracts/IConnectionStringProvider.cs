@@ -2,6 +2,6 @@
 {
     public interface IConnectionStringProvider
     {
-        string ConnectionString { get; } 
+        string ConnectionStringKey { get; } 
     }
 }

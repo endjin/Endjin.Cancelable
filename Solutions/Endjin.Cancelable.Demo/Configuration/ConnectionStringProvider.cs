@@ -4,7 +4,7 @@
 
     public class ConnectionStringProvider : IConnectionStringProvider
     {
-        public string ConnectionString
+        public string ConnectionStringKey
         {
             get { return "Storage.CancellationProvider.ConnectionString"; }
         }
