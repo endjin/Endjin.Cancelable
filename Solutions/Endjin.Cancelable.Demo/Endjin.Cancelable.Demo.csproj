@@ -34,24 +34,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EndjinCoreComposition, Version=2.2.0.44, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
-      <HintPath>..\packages\Endjin.Core.Composition.2.2.0.44\lib\Net45\EndjinCoreComposition.dll</HintPath>
+      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.44\lib\Net45\EndjinCoreComposition.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EndjinCoreCompositionNet45, Version=2.2.0.44, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
-      <HintPath>..\packages\Endjin.Core.Composition.2.2.0.44\lib\Net45\EndjinCoreCompositionNet45.dll</HintPath>
+      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.44\lib\Net45\EndjinCoreCompositionNet45.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EndjinCoreContainer, Version=2.2.0.44, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
-      <HintPath>..\packages\Endjin.Core.Composition.2.2.0.44\lib\Net45\EndjinCoreContainer.dll</HintPath>
+      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.44\lib\Net45\EndjinCoreContainer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EndjinCoreContainerNet45, Version=2.2.0.44, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
-      <HintPath>..\packages\Endjin.Core.Composition.2.2.0.44\lib\Net45\EndjinCoreContainerNet45.dll</HintPath>
+      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.44\lib\Net45\EndjinCoreContainerNet45.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\ConnectionStringProvider.cs" />
