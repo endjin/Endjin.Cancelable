@@ -16,7 +16,7 @@
     {
         public static void Main(string[] args)
         {
-            Console.BackgroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Ensure you are running the Azure Storage Emulator!");
             Console.ResetColor();
 
