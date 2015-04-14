@@ -142,6 +142,36 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("A long running task runs to completion when an issued cancellation token is delet" +
+            "ed prior to running")]
+        [NUnit.Framework.CategoryAttribute("container")]
+        [NUnit.Framework.CategoryAttribute("storage_emulator")]
+        public virtual void ALongRunningTaskRunsToCompletionWhenAnIssuedCancellationTokenIsDeletedPriorToRunning()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A long running task runs to completion when an issued cancellation token is delet" +
+                    "ed prior to running", new string[] {
+                        "container",
+                        "storage_emulator"});
+#line 31
+this.ScenarioSetup(scenarioInfo);
+#line 32
+ testRunner.Given("the long running task takes 6 seconds to complete", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 33
+ testRunner.And("that a cancellation token \'5e3e3b9d-d42a-4554-97ab-f2dffee8a746\' is issued", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 34
+ testRunner.And("the cancellation token \'5e3e3b9d-d42a-4554-97ab-f2dffee8a746\' is deleted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 35
+ testRunner.And("the task is told to cancel if the cancellation token \'5e3e3b9d-d42a-4554-97ab-f2d" +
+                    "ffee8a746\' is issued", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 36
+ testRunner.When("I execute the task", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 37
+ testRunner.Then("it should complete sucessfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

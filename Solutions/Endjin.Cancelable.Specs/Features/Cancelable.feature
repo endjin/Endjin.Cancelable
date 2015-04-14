@@ -27,5 +27,14 @@ Scenario: A long running task runs to completion and is then cancelled
 	When I execute the task 
 	Then it should complete sucessfully
 
+@container @storage_emulator
+Scenario: A long running task runs to completion when an issued cancellation token is deleted prior to running
+	Given the long running task takes 6 seconds to complete
+	And that a cancellation token '5e3e3b9d-d42a-4554-97ab-f2dffee8a746' is issued
+	And the cancellation token '5e3e3b9d-d42a-4554-97ab-f2dffee8a746' is deleted
+	And the task is told to cancel if the cancellation token '5e3e3b9d-d42a-4554-97ab-f2dffee8a746' is issued
+	When I execute the task 
+	Then it should complete sucessfully
+
 # We need to think about creating a system service for cleaning up old cancellation tokens to deal with the scenario of something being cancelled after it's actually
 # finished running. We could do something like scan for blobs that are > 24 hours old and remove them.

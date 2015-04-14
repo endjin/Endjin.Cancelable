@@ -43,5 +43,12 @@
 
             return cancelableResult;
         }
+
+        public async Task DeleteTokenAsync(string cancellationToken)
+        {
+            var cancellationTokenProvider = ApplicationServiceLocator.Container.Resolve<ICancellationTokenProvider>();
+
+            await cancellationTokenProvider.DeleteAsync(cancellationToken);
+        }
     }
 }

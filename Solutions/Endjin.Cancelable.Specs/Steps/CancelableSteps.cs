@@ -45,6 +45,21 @@
             ScenarioContext.Current.Set(token, "CancellationToken");
         }
 
+        [Given(@"that a cancellation token '(.*)' is issued")]
+        public void GivenThatACancellationTokenIsIssued(string token)
+        {
+            var cancelable = ApplicationServiceLocator.Container.Resolve<ICancelable>();
+            cancelable.CreateTokenAsync(token).Wait();
+        }
+
+        [Given(@"the cancellation token '(.*)' is deleted")]
+        public void GivenTheCancellationTokenIsDeleted(string token)
+        {
+            var cancelable = ApplicationServiceLocator.Container.Resolve<ICancelable>();
+            cancelable.DeleteTokenAsync(token).Wait();
+        }
+
+
         [Then(@"it should complete sucessfully")]
         public void ThenItShouldCompleteSucessfully()
         {

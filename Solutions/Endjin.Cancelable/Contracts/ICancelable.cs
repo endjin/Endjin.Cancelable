@@ -16,5 +16,7 @@ namespace Endjin.Contracts
         Task CreateTokenAsync(string cancellationToken);
 
         Task<CancelableResult> RunUntilCompleteOrCancelledAsync(Func<CancellationToken, Task> action, string cancellationToken, IPeriodicityStrategy periodicityStrategy = null);
+
+        Task DeleteTokenAsync(string cancellationToken);
     }
 }
