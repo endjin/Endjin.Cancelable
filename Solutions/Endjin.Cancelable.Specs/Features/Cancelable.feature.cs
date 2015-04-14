@@ -68,10 +68,12 @@ namespace Endjin.Cancelable.Specs.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("A long running task runs to completion")]
         [NUnit.Framework.CategoryAttribute("container")]
+        [NUnit.Framework.CategoryAttribute("storage_emulator")]
         public virtual void ALongRunningTaskRunsToCompletion()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A long running task runs to completion", new string[] {
-                        "container"});
+                        "container",
+                        "storage_emulator"});
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
@@ -92,10 +94,12 @@ this.ScenarioSetup(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("A long running task is cancelled")]
         [NUnit.Framework.CategoryAttribute("container")]
+        [NUnit.Framework.CategoryAttribute("storage_emulator")]
         public virtual void ALongRunningTaskIsCancelled()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A long running task is cancelled", new string[] {
-                        "container"});
+                        "container",
+                        "storage_emulator"});
 #line 15
 this.ScenarioSetup(scenarioInfo);
 #line 16
@@ -116,10 +120,12 @@ this.ScenarioSetup(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("A long running task runs to completion and is then cancelled")]
         [NUnit.Framework.CategoryAttribute("container")]
+        [NUnit.Framework.CategoryAttribute("storage_emulator")]
         public virtual void ALongRunningTaskRunsToCompletionAndIsThenCancelled()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A long running task runs to completion and is then cancelled", new string[] {
-                        "container"});
+                        "container",
+                        "storage_emulator"});
 #line 23
 this.ScenarioSetup(scenarioInfo);
 #line 24

@@ -30,12 +30,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Endjin.SpecFlow">
-      <HintPath>..\..\Packages\Endjin.SpecFlow.1.0.0.33\lib\net45\Endjin.SpecFlow.dll</HintPath>
-    </Reference>
-    <Reference Include="Endjin.SpecFlow.Composition, Version=1.0.0.33, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
+    <Reference Include="Endjin.SpecFlow, Version=1.0.0.36, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Packages\Endjin.SpecFlow.Composition.1.0.0.33\lib\net45\Endjin.SpecFlow.Composition.dll</HintPath>
+      <HintPath>..\..\Packages\Endjin.SpecFlow.1.0.0.36\lib\net45\Endjin.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="Endjin.SpecFlow.Azure.Storage, Version=1.0.0.36, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Packages\Endjin.SpecFlow.Azure.Storage.1.0.0.36\lib\net45\Endjin.SpecFlow.Azure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Endjin.SpecFlow.Composition, Version=1.0.0.36, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Packages\Endjin.SpecFlow.Composition.1.0.0.36\lib\net45\Endjin.SpecFlow.Composition.dll</HintPath>
     </Reference>
     <Reference Include="EndjinCoreComposition, Version=2.2.0.44, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
