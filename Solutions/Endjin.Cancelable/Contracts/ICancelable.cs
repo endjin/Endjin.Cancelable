@@ -10,7 +10,7 @@ namespace Endjin.Contracts
 
     public interface ICancelable
     {
-        Task CreateToken(string cancellationToken);
+        Task CreateTokenAsync(string cancellationToken);
 
         Task RunUntilCompleteOrCancelledAsync(Func<CancellationToken, Task> action, string cancellationToken);
     }

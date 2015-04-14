@@ -13,7 +13,7 @@
 
     public class Cancelable : ICancelable
     {
-        public async Task CreateToken(string cancellationToken)
+        public async Task CreateTokenAsync(string cancellationToken)
         {
             var cancellationTokenProvider = ApplicationServiceLocator.Container.Resolve<ICancellationTokenProvider>();
             

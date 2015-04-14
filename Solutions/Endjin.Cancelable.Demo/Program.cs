@@ -25,7 +25,7 @@
             var cancelable = ApplicationServiceLocator.Container.Resolve<ICancelable>();
             var cancellationToken = "E75FF4F5-755E-4FB9-ABE0-24BD81F4D045";
 
-            cancelable.CreateToken(cancellationToken);
+            cancelable.CreateTokenAsync(cancellationToken);
             cancelable.RunUntilCompleteOrCancelledAsync(DoSomethingLongRunningAsync, cancellationToken).Wait();
 
             Console.WriteLine("Press Any Key to Exit!");
