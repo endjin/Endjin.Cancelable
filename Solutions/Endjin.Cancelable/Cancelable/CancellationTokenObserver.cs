@@ -7,6 +7,7 @@
     using System.Threading.Tasks;
 
     using Endjin.Contracts;
+    using Endjin.Core.Repeat.Strategies;
 
     #endregion
 
@@ -36,13 +37,13 @@
 
         public bool IsMonitoring { get; private set; }
 
-        public void StartMonitoring(string cancellationToken)
+        public void StartMonitoring(string cancellationToken, IPeriodicityStrategy periodicityStrategy)
         {
             this.scanForTokenTask = Task.Factory.StartNew(async () =>
             {
                 while (!this.CancellationTokenSource.IsCancellationRequested)
                 {
-                    this.CancellationTokenSource.Token.WaitHandle.WaitOne(TimeSpan.FromSeconds(5));
+                    this.CancellationTokenSource.Token.WaitHandle.WaitOne(periodicityStrategy.GetPeriodicity());
 
                     if (await this.cancellationTokenProvider.ExistsAsync(cancellationToken))
                     {

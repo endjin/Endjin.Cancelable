@@ -49,6 +49,10 @@
       <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.44\lib\Net45\EndjinCoreContainerNet45.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="EndjinRetry, Version=1.0.0.47, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Packages\Endjin.Retry.1.0.0.47\lib\portable-net45+win8\EndjinRetry.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />

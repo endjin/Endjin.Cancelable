@@ -5,6 +5,8 @@
     using System;
     using System.Threading;
 
+    using Endjin.Core.Repeat.Strategies;
+
     #endregion
 
     public interface ICancellationTokenObserver : IDisposable
@@ -13,7 +15,7 @@
 
         bool IsMonitoring { get; }
 
-        void StartMonitoring(string cancellationToken);
+        void StartMonitoring(string cancellationToken, IPeriodicityStrategy periodicityStrategy);
 
         void StopMonitoring();
     }

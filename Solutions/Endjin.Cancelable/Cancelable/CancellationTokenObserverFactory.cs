@@ -3,6 +3,7 @@ namespace Endjin.Cancelable
     #region Using Directives
 
     using Endjin.Contracts;
+    using Endjin.Core.Repeat.Strategies;
 
     #endregion
 
@@ -15,11 +16,11 @@ namespace Endjin.Cancelable
             this.cancellationTokenProvider = cancellationTokenProvider;
         }
 
-        public ICancellationTokenObserver Create(string token)
+        public ICancellationTokenObserver Create(string token, IPeriodicityStrategy periodicityStrategy)
         {
             var cancellationTokenObserver = new CancellationTokenObserver(this.cancellationTokenProvider);
 
-            cancellationTokenObserver.StartMonitoring(token);
+            cancellationTokenObserver.StartMonitoring(token, periodicityStrategy);
 
             return cancellationTokenObserver;
         }

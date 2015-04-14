@@ -8,6 +8,7 @@
 
     using Endjin.Contracts;
     using Endjin.Core.Composition;
+    using Endjin.Core.Repeat.Strategies;
 
     #endregion
 
@@ -20,14 +21,27 @@
             await cancellationTokenProvider.CreateAsync(cancellationToken);
         }
 
-        public async Task RunUntilCompleteOrCancelledAsync(Func<CancellationToken, Task> action, string cancellationToken)
+        public async Task<CancelableResult> RunUntilCompleteOrCancelledAsync(Func<CancellationToken, Task> action, string cancellationToken, IPeriodicityStrategy periodicityStrategy = null)
         {
+            if (periodicityStrategy == null)
+            {
+                periodicityStrategy = new LinearPeriodicityStrategy(TimeSpan.FromSeconds(5));
+            }
+
             var cancellationTokenObserverFactory = ApplicationServiceLocator.Container.Resolve<ICancellationTokenObserverFactory>();
 
-            using (var cancellationTokenObserver = cancellationTokenObserverFactory.Create(cancellationToken))
+            var cancelableResult = CancelableResult.Completed;
+
+            using (var cancellationTokenObserver = cancellationTokenObserverFactory.Create(cancellationToken, periodicityStrategy))
             {
                 await action(cancellationTokenObserver.CancellationTokenSource.Token);
+                if (cancellationTokenObserver.CancellationTokenSource.IsCancellationRequested)
+                {
+                    cancelableResult = CancelableResult.Cancelled;
+                }
             }
+
+            return cancelableResult;
         }
     }
 }

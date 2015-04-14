@@ -3,22 +3,25 @@
 	As an actor in the system
 	I want to be able to issue a command to cancel a long running task
 
+@container
 Scenario: A long running task runs to completion
-	Given the long running task takes 5 seconds to complete
+	Given the long running task takes 3 seconds to complete
 	And the task is told to cancel if the cancellation token '19d411fc-5014-4eaa-8f84-0fe3d4b93068' is issued
 	And no cancelation token is issued
 	When I execute the task 
 	Then it should complete sucessfully
 
+@container
 Scenario: A long running task is cancelled
-	Given the long running task takes 5 seconds to complete
+	Given the long running task takes 6 seconds to complete
 	And the task is told to cancel if the cancellation token '5c8f0e6a-ca54-4824-ac19-ccea64239a17' is issued
 	And a cancelation token is issued
 	When I execute the task
 	Then the task should be cancelled
 
+@container
 Scenario: A long running task runs to completion and is then cancelled
-	Given the long running task takes 5 seconds to complete
+	Given the long running task takes 4 seconds to complete
 	And the task is told to cancel if the cancellation token '5e3e3b9d-d42a-4554-97ab-f2dffee8a746' is issued
 	And a cancelation token is issued
 	When I execute the task 

@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cancelable\Cancelable.cs" />
+    <Compile Include="Cancelable\CancelableResult.cs" />
     <Compile Include="Cancelable\CancellationTokenObserver.cs" />
     <Compile Include="Cancelable\CancellationTokenObserverFactory.cs" />
     <Compile Include="Contracts\ICancelable.cs" />
