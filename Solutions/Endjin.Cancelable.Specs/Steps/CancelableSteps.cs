@@ -84,7 +84,7 @@
             var delay = ScenarioContext.Current.Get<TimeSpan>("TaskTimeToComplete");
             var cancellationToken = ScenarioContext.Current.Get<string>("CancellationToken");
 
-            var result = cancelable.RunUntilCompleteOrCancelledAsync(async token => Task.Delay(delay).Wait(), cancellationToken, periodicityStrategy).Result;
+            var result = cancelable.RunUntilCompleteOrCancelledAsync(async token => await Task.Delay(delay), cancellationToken, periodicityStrategy).Result;
 
             ScenarioContext.Current.Set(result, "Result");
         }

@@ -14,6 +14,7 @@
     public class CancellationTokenObserver : ICancellationTokenObserver
     {
         private readonly ICancellationTokenProvider cancellationTokenProvider;
+
         private CancellationTokenSource cancellationTokenSource;
         private Task<Task> scanForTokenTask;
 

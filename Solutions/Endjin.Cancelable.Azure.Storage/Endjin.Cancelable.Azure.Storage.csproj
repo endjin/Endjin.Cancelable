@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cancelable\Azure\Storage\CancellationTokenProvider.cs" />
+    <Compile Include="Cancelable\Azure\Storage\Configuration.cs" />
     <Compile Include="Contracts\IConnectionStringProvider.cs" />
     <Compile Include="Cancelable\Azure\Storage\Installers\CancellationInstaller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

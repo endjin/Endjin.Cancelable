@@ -65,7 +65,7 @@
         {
             if (!this.initialised)
             {
-                this.storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting(this.connectionStringProvider.ConnectionStringKey));
+                this.storageAccount = CloudStorageAccount.Parse(Configuration.GetSettingFor(this.connectionStringProvider.ConnectionStringKey));
                 this.client = this.storageAccount.CreateCloudBlobClient();
                 this.container = this.client.GetContainerReference("endjin-cancelable-tokens");
 
