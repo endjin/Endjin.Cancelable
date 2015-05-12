@@ -21,7 +21,7 @@
         [Given(@"a cancelation token is issued")]
         public void GivenACancelationTokenIsIssued()
         {
-            var cancelable = new Cancelable(new CancellationTokenProvider(new ConnectionStringProvider()), new CancellationTokenObserverFactory(new CancellationTokenProvider(new ConnectionStringProvider())));
+            var cancelable = new Cancelable(new AzureBlobStorageCancellationTokenProvider(new ConnectionStringProvider()));
 
             string token = ScenarioContext.Current.Get<string>("CancellationToken");
             cancelable.CreateTokenAsync(token).Wait();
@@ -48,14 +48,14 @@
         [Given(@"that a cancellation token '(.*)' is issued")]
         public void GivenThatACancellationTokenIsIssued(string token)
         {
-            var cancelable = new Cancelable(new CancellationTokenProvider(new ConnectionStringProvider()), new CancellationTokenObserverFactory(new CancellationTokenProvider(new ConnectionStringProvider())));
+            var cancelable = new Cancelable(new AzureBlobStorageCancellationTokenProvider(new ConnectionStringProvider()));
             cancelable.CreateTokenAsync(token).Wait();
         }
 
         [Given(@"the cancellation token '(.*)' is deleted")]
         public void GivenTheCancellationTokenIsDeleted(string token)
         {
-            var cancelable = new Cancelable(new CancellationTokenProvider(new ConnectionStringProvider()), new CancellationTokenObserverFactory(new CancellationTokenProvider(new ConnectionStringProvider())));
+            var cancelable = new Cancelable(new AzureBlobStorageCancellationTokenProvider(new ConnectionStringProvider()));
             cancelable.DeleteTokenAsync(token).Wait();
         }
 
@@ -77,7 +77,7 @@
         [When(@"I execute the task")]
         public void WhenIExecuteTheTask()
         {
-            var cancelable = new Cancelable(new CancellationTokenProvider(new ConnectionStringProvider()), new CancellationTokenObserverFactory(new CancellationTokenProvider(new ConnectionStringProvider())));
+            var cancelable = new Cancelable(new AzureBlobStorageCancellationTokenProvider(new ConnectionStringProvider()));
             IPeriodicityStrategy periodicityStrategy;
 
             ScenarioContext.Current.TryGetValue("PeriodicityStrategy", out periodicityStrategy);

@@ -14,7 +14,7 @@
 
     #endregion
 
-    public class CancellationTokenProvider : ICancellationTokenProvider
+    public class AzureBlobStorageCancellationTokenProvider : ICancellationTokenProvider
     {
         private readonly IConnectionStringProvider connectionStringProvider;
         
@@ -23,7 +23,7 @@
         private bool initialised;
         private CloudStorageAccount storageAccount;
 
-        public CancellationTokenProvider(IConnectionStringProvider connectionStringProvider)
+        public AzureBlobStorageCancellationTokenProvider(IConnectionStringProvider connectionStringProvider)
         {
             this.connectionStringProvider = connectionStringProvider;
         }

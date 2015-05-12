@@ -16,10 +16,10 @@
         private readonly ICancellationTokenProvider cancellationTokenProvider;
         private readonly ICancellationTokenObserverFactory cancellationTokenObserverFactory;
 
-        public Cancelable(ICancellationTokenProvider cancellationTokenProvider, ICancellationTokenObserverFactory cancellationTokenObserverFactory)
+        public Cancelable(ICancellationTokenProvider cancellationTokenProvider)
         {
             this.cancellationTokenProvider = cancellationTokenProvider;
-            this.cancellationTokenObserverFactory = cancellationTokenObserverFactory;
+            this.cancellationTokenObserverFactory = new CancellationTokenObserverFactory(this.cancellationTokenProvider);
         }
 
         public async Task CreateTokenAsync(string cancellationToken)

@@ -69,7 +69,7 @@
     <Reference Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cancelable\Azure\Storage\CancellationTokenProvider.cs" />
+    <Compile Include="Cancelable\Azure\Storage\AzureBlobStorageCancellationTokenProvider.cs" />
     <Compile Include="Cancelable\Azure\Storage\Configuration.cs" />
     <Compile Include="Contracts\IConnectionStringProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
