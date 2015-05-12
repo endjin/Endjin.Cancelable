@@ -7,18 +7,24 @@
     using System.Threading.Tasks;
 
     using Endjin.Contracts;
-    using Endjin.Core.Composition;
     using Endjin.Core.Repeat.Strategies;
 
     #endregion
 
     public class Cancelable : ICancelable
     {
+        private readonly ICancellationTokenProvider cancellationTokenProvider;
+        private readonly ICancellationTokenObserverFactory cancellationTokenObserverFactory;
+
+        public Cancelable(ICancellationTokenProvider cancellationTokenProvider, ICancellationTokenObserverFactory cancellationTokenObserverFactory)
+        {
+            this.cancellationTokenProvider = cancellationTokenProvider;
+            this.cancellationTokenObserverFactory = cancellationTokenObserverFactory;
+        }
+
         public async Task CreateTokenAsync(string cancellationToken)
         {
-            var cancellationTokenProvider = ApplicationServiceLocator.Container.Resolve<ICancellationTokenProvider>();
-            
-            await cancellationTokenProvider.CreateAsync(cancellationToken);
+            await this.cancellationTokenProvider.CreateAsync(cancellationToken);
         }
 
         public async Task<CancelableResult> RunUntilCompleteOrCancelledAsync(Func<CancellationToken, Task> action, string cancellationToken, IPeriodicityStrategy periodicityStrategy = null)
@@ -28,11 +34,9 @@
                 periodicityStrategy = new LinearPeriodicityStrategy(TimeSpan.FromSeconds(5));
             }
 
-            var cancellationTokenObserverFactory = ApplicationServiceLocator.Container.Resolve<ICancellationTokenObserverFactory>();
-
             var cancelableResult = CancelableResult.Completed;
 
-            using (var cancellationTokenObserver = cancellationTokenObserverFactory.Create(cancellationToken, periodicityStrategy))
+            using (var cancellationTokenObserver = this.cancellationTokenObserverFactory.Create(cancellationToken, periodicityStrategy))
             {
                 await action(cancellationTokenObserver.CancellationTokenSource.Token);
                 if (cancellationTokenObserver.CancellationTokenSource.IsCancellationRequested)
@@ -46,9 +50,7 @@
 
         public async Task DeleteTokenAsync(string cancellationToken)
         {
-            var cancellationTokenProvider = ApplicationServiceLocator.Container.Resolve<ICancellationTokenProvider>();
-
-            await cancellationTokenProvider.DeleteAsync(cancellationToken);
+            await this.cancellationTokenProvider.DeleteAsync(cancellationToken);
         }
     }
 }

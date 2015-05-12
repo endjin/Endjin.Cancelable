@@ -6,9 +6,8 @@
     using System.Threading;
     using System.Threading.Tasks;
 
-    using Endjin.Contracts;
-    using Endjin.Core.Composition;
-    using Endjin.Core.Container;
+    using Endjin.Cancelable.Azure.Storage;
+    using Endjin.Cancelable.Demo.Configuration;
 
     #endregion
 
@@ -20,9 +19,7 @@
             Console.WriteLine("Ensure you are running the Azure Storage Emulator!");
             Console.ResetColor();
 
-            ApplicationServiceLocator.InitializeAsync(new Container(), new DesktopBootstrapper()).Wait();
-
-            var cancelable = ApplicationServiceLocator.Container.Resolve<ICancelable>();
+            var cancelable = new Cancelable(new CancellationTokenProvider(new ConnectionStringProvider()), new CancellationTokenObserverFactory(new CancellationTokenProvider(new ConnectionStringProvider())));
             var cancellationToken = "E75FF4F5-755E-4FB9-ABE0-24BD81F4D045";
 
             cancelable.CreateTokenAsync(cancellationToken);

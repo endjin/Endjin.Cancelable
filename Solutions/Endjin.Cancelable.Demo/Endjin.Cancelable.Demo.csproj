@@ -33,22 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EndjinCoreComposition, Version=2.2.0.44, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.44\lib\Net45\EndjinCoreComposition.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EndjinCoreCompositionNet45, Version=2.2.0.44, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.44\lib\Net45\EndjinCoreCompositionNet45.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EndjinCoreContainer, Version=2.2.0.44, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.44\lib\Net45\EndjinCoreContainer.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EndjinCoreContainerNet45, Version=2.2.0.44, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.44\lib\Net45\EndjinCoreContainerNet45.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="EndjinRetry, Version=1.0.0.47, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Packages\Endjin.Retry.1.0.0.47\lib\portable-net45+win8\EndjinRetry.dll</HintPath>
@@ -60,7 +44,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\ConnectionStringProvider.cs" />
-    <Compile Include="Installers\CancellationInstaller.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

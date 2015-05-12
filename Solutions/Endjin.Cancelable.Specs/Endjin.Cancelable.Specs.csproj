@@ -38,26 +38,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Packages\Endjin.SpecFlow.Azure.Storage.1.0.0.36\lib\net45\Endjin.SpecFlow.Azure.Storage.dll</HintPath>
     </Reference>
-    <Reference Include="Endjin.SpecFlow.Composition, Version=1.0.0.36, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Packages\Endjin.SpecFlow.Composition.1.0.0.36\lib\net45\Endjin.SpecFlow.Composition.dll</HintPath>
-    </Reference>
-    <Reference Include="EndjinCoreComposition, Version=2.2.0.44, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.44\lib\Net45\EndjinCoreComposition.dll</HintPath>
-    </Reference>
-    <Reference Include="EndjinCoreCompositionNet45, Version=2.2.0.44, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.44\lib\Net45\EndjinCoreCompositionNet45.dll</HintPath>
-    </Reference>
-    <Reference Include="EndjinCoreContainer, Version=2.2.0.44, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.44\lib\Net45\EndjinCoreContainer.dll</HintPath>
-    </Reference>
-    <Reference Include="EndjinCoreContainerNet45, Version=2.2.0.44, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Packages\Endjin.Core.Composition.2.2.0.44\lib\Net45\EndjinCoreContainerNet45.dll</HintPath>
-    </Reference>
     <Reference Include="EndjinRetry, Version=1.0.0.47, Culture=neutral, PublicKeyToken=50271567b54a4602, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Packages\Endjin.Retry.1.0.0.47\lib\portable-net45+win8\EndjinRetry.dll</HintPath>
@@ -88,7 +68,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Cancelable.feature</DependentUpon>
     </Compile>
-    <Compile Include="Installers\CancellationInstaller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\CancelableSteps.cs" />
   </ItemGroup>

@@ -3,7 +3,7 @@
     <metadata>
     <id>Endjin.Cancelable.Azure.Storage</id>
     <version>1.0.0.0</version>
-    <description>This package contains the core components of the cancellation framework</description>
+    <description>This package contains the Azure Storage extensions of the cancellation framework</description>
     <title>Endjin's Distributed Cancellation Framework extensions for Azure Storage</title>
     <authors>Endjin</authors>
     <owners>Endjin</owners>
@@ -15,7 +15,6 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <dependencies>
       <dependency id="Endjin.Cancelable" version="1.0.0.0" />
-      <dependency id="Endjin.Core.Composition" version="2.2.0.0" />
       <dependency id="Endjin.Retry" version="1.0.0.0" />
       <dependency id="WindowsAzure.Storage" version="4.3.0" />
     </dependencies>
